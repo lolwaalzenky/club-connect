@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Club Connect - Member Registration</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club Connect - Member Registration</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+<div class="container">
+
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+<img src="images/lion.png" alt="Lion Logo" style="width:32px; margin-right:10px;">
+<span class="site-title">Club Connect</span>
+</a>
+
+<div>
+<a class="btn btn-light btn-sm me-2" href="index.html">Home</a>
+<a class="btn btn-light btn-sm" href="register.html">Member Registration</a>
+</div>
+
+</div>
+</nav>
+
+<div class="container mt-4">
+
+<h1>Member Registration</h1>
+
+<p>Fill out the form to add a member. Use the Edit button to update a member.</p>
+
+<div class="alert alert-info">
+Tip: Required fields are Name, Email, Year, and Affiliation.
+</div>
+
+<form id="memberForm">
+
+<div class="mb-3">
+<label>Member Name</label>
+<input type="text" id="name" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Email Address</label>
+<input type="email" id="email" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Year / Grade Level</label>
+<input type="text" id="year" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Organization / Affiliation</label>
+<input type="text" id="affiliation" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Contact Number</label>
+<input type="text" id="phone" class="form-control">
+</div>
+
+<button class="btn btn-primary">Add Member</button>
+<button type="reset" class="btn btn-secondary">Clear</button>
+
+</form>
+
+<hr>
+
+<h2>Member Directory</h2>
+
+<table class="table">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Year</th>
+<th>Affiliation</th>
+<th>Phone</th>
+</tr>
+</thead>
+
+<tbody id="memberTable"></tbody>
+
+</table>
+
+<h3>Saved JSON Data</h3>
+
+<pre id="jsonDisplay"></pre>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
