@@ -1,28 +1,153 @@
-body{
-font-family: 'Special Elite', monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-max-width:950px;
+body.home-page {
+  min-height: 100vh;
+  background: url("../images/mountain-bg.jpg") no-repeat center center/cover;
 }
 
-.card{
-border-radius:10px;
+.overlay {
+  min-height: 100vh;
+  background: rgba(20, 20, 20, 0.35);
+  color: white;
 }
 
-pre{
-background:#f8f9fa;
-border:1px solid #ddd;
-padding:10px;
+/* top white banner */
+.navbar {
+  width: 100%;
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.logo{
-  width:36px;
-  height:36px;
-  margin-right:10px;
+
+/* logo text */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
 }
-.site-title{
-font-family:"Copperplate","Copperplate Gothic Bold",serif;
-font-size:32px;
-font-weight:bold;
-letter-spacing:2px;
+
+/* nav container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+/* nav buttons */
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: #f1f1f1;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #dddddd;
+}
+
+.hero {
+  width: 90%;
+  margin: 60px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-box {
+  width: 100%;
+  max-width: 750px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.small-text {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.hero-box h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.main-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: #222;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.features-box {
+  width: 100%;
+  max-width: 750px;
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  text-align: left;
+}
+
+.features-box h2 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+}
+
+.feature-item {
+  font-size: 1.5rem;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-box h1 {
+    font-size: 2.2rem;
+  }
+
+  .feature-item {
+    font-size: 1.2rem;
+  }
 }
